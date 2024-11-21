@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Leoiscool.com</title>
+        <link rel="stylesheet" href="LeoCOM.css">
+        <link rel="icon" href="skibidinico.png">
+        <script src="LeoCOM.js"></script>
+    </head>
+<body>
+    <div id="WebsiteHeader">Welcome to Leo.com!!!</div>
+    
+    <div id="PlayGame"><a href="file:///media/fuse/crostini_239091e42f3314d8b8b2a11513cbcb7af37d9cfa_termina_penguin/MyFirstWebsite/minecraftHacksWebsite/games.html" target="_blank">Play a game</a></div>
+
+    <div id="RandomThingy" onclick= "RandomNumberGenerator()" style="cursor: pointer">Random Thing</div>
+
+    <div id="MCHACKS" onclick="">$2 Minecraft Hacks</div>
+
+    <div id="SHHH" onclick="getIP(json)">Shhh...</div>
+
+    <a href="file:///media/fuse/crostini_239091e42f3314d8b8b2a11513cbcb7af37d9cfa_termina_penguin/MyFirstWebsite/minecraftHacksWebsite/shh2.html"></a>
+
+</body>
+
+<script type="application/javascript">
+    function getIP(json) {
+      document.write("My public IP address is: ", json.ip);
+    }
+  </script>
+  
+  <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>

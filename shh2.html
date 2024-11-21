@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Email</title>
+</head>
+<body>
+    <h1>Send an Email</h1>
+    <button onclick="sendEmail()">Send Email</button>
+
+    <script>
+        function sendEmail() {
+            const emailData = {
+                email: 'lelojohn.dagamer@gmail.com',
+                subject: 'Test Subject',
+                message: 'This is a test message.'
+            };
+
+            fetch('http://localhost:3000/send-email', {  // Change URL to your server's address
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(emailData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Email sent:', data);
+            })
+            .catch(error => {
+                console.error('Error sending email:', error);
+            });
+        }
+    </script>
+</body>
+</html>
